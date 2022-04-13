@@ -1,16 +1,13 @@
 import styled from "styled-components"
-import { DiScala } from "react-icons/di"
 import { Link } from "gatsby"
+import McwLogo from "../icons/McwLogo"
 
 export const Nav = styled.nav`
-  background: ${({ active }) =>
-    active
-      ? "#fff"
-      : "linear-gradient(to bottom, rgba(255,255,255,0.9) \
-      0%, rgba(255,255,255,0) 100%)"};
+  background: ${({ active }) => (active ? "#fff" : "#2196F3")};
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: "100%";
   align-items: center;
   font-style: 1rem;
   position: sticky;
@@ -18,7 +15,7 @@ export const Nav = styled.nav`
   z-index: 999;
 
   @media screen and (max-width: 960px) {
-    background: ${({ click }) => (click ? "#fff" : "transparent")};
+    background: ${({ click }) => (click ? "#fff" : "rgba(255,255,255,0.5)")};
     transition: 0.8s all ease;
   }
 `
@@ -29,19 +26,24 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1000px;
+  padding-left: 125px;
+  padding-right: 125px;
 `
 export const NavLogo = styled(Link)`
-  color: #141414;
+  color: ${({ dark }) => (dark ? "#2196F3" : "#fff")};
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 960px) {
+    color: #2196f3;
+  }
 `
 
-export const NavIcon = styled(DiScala)`
+export const NavIcon = styled(McwLogo)`
   margin: 0 0.5rem 0 2rem;
 `
 
@@ -67,18 +69,23 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 90vh;
+    width: fit-content;
+    height: fit-content;
     position: absolute;
     top: ${({ click }) => (click ? "100%" : "-1000px")};
+    right: 0;
     opacity: 1;
     transition: all 0.2s ease;
     background: #fff;
   }
 `
 
+export const SemiBold = styled.span`
+  font-weight: 600;
+`
+
 export const NavLinks = styled(Link)`
-  color: #141414;
+  color: ${({ dark }) => (dark ? "#2196F3" : "#fff")};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -90,17 +97,37 @@ export const NavLinks = styled(Link)`
     padding: 2rem;
     width: 100%;
     display: table;
+    color: #2196f3;
 
     &:hover {
-      color: #ff4040;
+      color: #000;
       transition: all 0.3s ease;
     }
+  }
+
+  @media screen and (max-width: 960px) {
   }
 `
 export const NavItem = styled.li`
   height: 80px;
+  display: flex;
+  justify-content: center;
 
   @media screen and (max-width: 960px) {
     width: 100%;
+  }
+`
+
+export const HiddenNarrow = styled.div`
+  display: flex;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+`
+
+export const HiddenWide = styled.div`
+  display: none;
+  @media screen and (max-width: 960px) {
+    display: flex;
   }
 `

@@ -10,7 +10,12 @@ import {
   NavMenu,
   NavLinks,
   NavItem,
+  SemiBold,
+  HiddenWide,
+  HiddenNarrow,
 } from "./NavbarElements"
+import McwLogo from "../../images/assets/megacarwash.svg"
+import { Button } from "../ButtonElements"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -35,24 +40,43 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#141414" }}>
         <Nav active={scroll} click={click}>
           <NavbarContainer>
-            <NavLogo to="/">
-              <NavIcon />
-              Explore
+            <NavLogo dark={scroll} to="/">
+              {/* <NavIcon /> */}
+              <McwLogo />
+              Mega<SemiBold>carwash</SemiBold>
             </NavLogo>
             <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
+              {click ? <FaTimes color="#2196F3" /> : <FaBars color="#2196F3" />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/">Home</NavLinks>
+                <NavLinks dark={scroll} to="/">
+                  Home
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/images">Images</NavLinks>
+                <NavLinks dark={scroll} to="/images">
+                  Images
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/about">About</NavLinks>
+                <NavLinks dark={scroll} to="/about">
+                  About
+                </NavLinks>
               </NavItem>
+              <HiddenWide>
+                <NavItem>
+                  <NavLinks dark={scroll} to="/">
+                    Contact us
+                  </NavLinks>
+                </NavItem>
+              </HiddenWide>
             </NavMenu>
+            <NavItem>
+              <HiddenNarrow>
+                <Button>Contact us</Button>
+              </HiddenNarrow>
+            </NavItem>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
