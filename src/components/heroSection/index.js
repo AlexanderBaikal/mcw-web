@@ -4,6 +4,9 @@ import React from "react"
 import { Button } from "../ButtonElements"
 import "./HeroSection.css"
 import image from "../../images/handbg.jpg"
+import imageBottom from "../../images/hand2.jpg"
+import asLink from "../../images/as.png"
+import gpLink from "../../images/gp.png"
 
 const HeroSection = () => {
   return (
@@ -20,9 +23,11 @@ const HeroSection = () => {
               <p>just sign up and come</p>
             </div>
             <div className="hero-btns">
-              <Button fontBig primary>
+              <img className="as-link" src={asLink} alt={"appstore"} />
+              <img className="gp-link" src={gpLink} alt={"goople play"} />
+              {/* <Button fontBig primary>
                 Get started
-              </Button>
+              </Button> */}
             </div>
             <div className="subtitle">
               <p>Additional.</p>
@@ -32,6 +37,9 @@ const HeroSection = () => {
         </div>
         <div className="hero-right">
           <img className="image-right" src={image} alt={"hand"} />
+        </div>
+        <div className="hero-bottom">
+          <img className="image-bottom" src={imageBottom} alt={"hand"} />
         </div>
       </div>
     </div>

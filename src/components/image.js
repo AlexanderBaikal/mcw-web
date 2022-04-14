@@ -15,7 +15,18 @@ function Image() {
       allFile(
         filter: {
           extension: { regex: "/(png)|(jpg)|(jpeg)/" }
-          name: { nin: ["background", "background2"] }
+          name: {
+            nin: [
+              "background"
+              "background2"
+              "hand"
+              "handbg"
+              "hand2"
+              "as"
+              "gp"
+              "mcw_icon"
+            ]
+          }
         }
       ) {
         edges {
