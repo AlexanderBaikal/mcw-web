@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   z-index: 999;
 
   @media screen and (max-width: 960px) {
-    background: ${({ click }) => (click ? "#fff" : "rgba(255,255,255,0.5)")};
+    background: ${({ click }) => (click ? "#fff" : "rgba(255,255,255,1)")};
     transition: 0.8s all ease;
   }
 `

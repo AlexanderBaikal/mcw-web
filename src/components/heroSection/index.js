@@ -29,9 +29,21 @@ const HeroSection = () => {
                 Get started
               </Button> */}
             </div>
-            <div className="subtitle">
-              <p>Additional.</p>
-              <p>information</p>
+            <div className="extras">
+              <div className="extra extra-left">
+                <p className="extra-number">10</p>
+                <div className="extra-col">
+                  <p className="extra-top">companies</p>
+                  <p className="extra-bottom">joined</p>
+                </div>
+              </div>
+              <div className="extra">
+                <p className="extra-number">1000+</p>
+                <div className="extra-col">
+                  <p className="extra-top">active</p>
+                  <p className="extra-bottom">clients</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
