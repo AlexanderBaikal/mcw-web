@@ -10,6 +10,7 @@
 .hero-wrapper{
     position: relative;
     height: 100%;
+    margin-bottom: 40px;
 }
 
 .hero-left-wrapper{
@@ -219,7 +220,8 @@
     min-width: 100%;
     max-width: 100%;
     min-height: 100%;
-    max-height: calc(100vh - 80px); 
+    /* max-height: calc(100vh - 80px);  */
+    max-height: 600px; 
     object-fit: cover;
 }
 
