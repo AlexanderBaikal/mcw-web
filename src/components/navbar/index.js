@@ -16,10 +16,12 @@ import {
 } from "./NavbarElements"
 import McwLogo from "../../images/assets/megacarwash.svg"
 import { Button } from "../ButtonElements"
+import useWindowDimensions from "../../hooks/useWindowDimensions"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [scroll, setScroll] = useState(false)
+  const { height, width } = useWindowDimensions()
 
   const handleClick = () => setClick(!click)
 
@@ -41,9 +43,16 @@ const Navbar = () => {
         <Nav active={scroll} click={click}>
           <NavbarContainer>
             <NavLogo dark={scroll} to="/">
-              {/* <NavIcon /> */}
-              <McwLogo />
-              Mega<SemiBold>carwash</SemiBold>
+              <McwLogo
+                fill={scroll || width < 960 ? "#2196F3" : "#fff"}
+                style={{ height: "40px", paddingRight: "12px" }}
+              />
+              {width >= 960 ? (
+                <>
+                  <span>Mega</span>
+                  <SemiBold>carwash</SemiBold>
+                </>
+              ) : null}
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes color="#2196F3" /> : <FaBars color="#2196F3" />}
@@ -54,14 +63,10 @@ const Navbar = () => {
                   Home
                 </NavLinks>
               </NavItem>
+              <NavItem></NavItem>
               <NavItem>
-                <NavLinks dark={scroll} to="/images">
-                  Images
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks dark={scroll} to="/about">
-                  About
+                <NavLinks dark={scroll} to="/author">
+                  Author
                 </NavLinks>
               </NavItem>
               <HiddenWide>

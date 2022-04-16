@@ -6,7 +6,7 @@ import "../components/layout.css"
 const About = () => (
   <Layout>
     <Seo title="About" />
-    <h1 className="about">About</h1>
+    <h1 className="author">Author</h1>
   </Layout>
 )
 

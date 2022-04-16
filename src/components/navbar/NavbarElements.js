@@ -26,8 +26,8 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 10%;
+  padding-right: 10%;
 `
 export const NavLogo = styled(Link)`
   color: ${({ dark }) => (dark ? "#2196F3" : "#fff")};
@@ -65,8 +65,10 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
+  margin-right: 50px;
 
   @media screen and (max-width: 960px) {
+    margin-right: 0px;
     display: flex;
     flex-direction: column;
     width: fit-content;

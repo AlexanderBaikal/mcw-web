@@ -3,8 +3,8 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
-  FaYoutube,
+  FaGithub,
+  FaTelegram,
 } from "react-icons/fa"
 import {
   FooterContainer,
@@ -15,30 +15,40 @@ import {
   SocialMediaWrap,
   WebsiteRights,
 } from "./FooterElements"
+import McwLogo from "../../images/assets/megacarwash.svg"
 
 const Footer = () => {
   return (
     <FooterContainer>
       <SocialMediaWrap>
         <SocialLogo to="/">
-          <SocialIcon />
-          Explore
+          <McwLogo
+            fill={"#fff"}
+            style={{ height: "16px", paddingRight: "10px" }}
+          />
+          Megacarwash
         </SocialLogo>
-        <WebsiteRights>Explore</WebsiteRights>
+        <WebsiteRights>© 2022 Aleksandr Baranov</WebsiteRights>
         <SocialIcons>
-          <SocialIconLink href="/" traget="_" aria-label="Facebook">
-            <FaFacebook />
+          <SocialIconLink
+            href="https://github.com/AlexanderBaikal"
+            target="blank"
+            aria-label="Github"
+          >
+            <FaGithub />
           </SocialIconLink>
-          <SocialIconLink href="/" traget="_" aria-label="Intagram">
+          <SocialIconLink
+            href="https://www.instagram.com/alex_baikalovvv/"
+            target="blank"
+            aria-label="Intagram"
+          >
             <FaInstagram />
           </SocialIconLink>
-          <SocialIconLink href="/" traget="_" aria-label="Twitter">
-            <FaTwitter />
-          </SocialIconLink>
-          <SocialIconLink href="/" traget="_" aria-label="Youtube">
-            <FaYoutube />
-          </SocialIconLink>
-          <SocialIconLink href="/" traget="_" aria-label="LinkedIn">
+          <SocialIconLink
+            href="https://www.linkedin.com/in/aleksandr-baikalov/"
+            target="blank"
+            aria-label="LinkedIn"
+          >
             <FaLinkedin />
           </SocialIconLink>
         </SocialIcons>
