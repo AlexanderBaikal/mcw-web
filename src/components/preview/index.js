@@ -10,7 +10,7 @@ import {
 } from "./PreviewSection"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import useWindowDimensions from "../../hooks/useWindowDimensions"
+import useWindowSize from "../../hooks/useGatsbyWindowSize"
 
 const PreviewSection = () => {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ const PreviewSection = () => {
     pauseOnHover: false,
   }
 
-  const { width } = useWindowDimensions()
+  const { width } = useWindowSize()
 
   return (
     <PreviewWrapper>

@@ -15,12 +15,12 @@ import {
 } from "./NavbarElements"
 import McwLogo from "../../images/assets/megacarwash.svg"
 import { Button } from "../ButtonElements"
-import useWindowDimensions from "../../hooks/useWindowDimensions"
+import useWindowSize from "../../hooks/useGatsbyWindowSize"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [scroll, setScroll] = useState(false)
-  const { width } = useWindowDimensions()
+  const { width } = useWindowSize()
 
   const handleClick = () => setClick(!click)
 

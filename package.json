@@ -6,6 +6,7 @@
   "author": "Aleksandr Baikalov",
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
+    "browser-monads": "^1.0.0",
     "gatsby": "^4.11.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-gatsby-cloud": "^4.11.1",
