@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[589],{9450:function(e,t,a){a.r(t);var r=a(7294),u=a(2551),l=a(9376);t.default=function(){return r.createElement(u.Z,null,r.createElement(l.Z,{title:"About"}),r.createElement("h1",{className:"author"},"Author"))}}}]);
+//# sourceMappingURL=component---src-pages-author-js-9bd4a4be9404e47dcf71.js.map
