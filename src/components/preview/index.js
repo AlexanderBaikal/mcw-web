@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react"
 import {
   PreviewContainer,
   PreviewImage,
+  PreviewImageList,
   PreviewTitle,
   PreviewWrapper,
   SliderStyled,
@@ -10,6 +11,7 @@ import {
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import useWindowDimensions from "../../hooks/useWindowDimensions"
 
 const PreviewSection = () => {
   const data = useStaticQuery(graphql`
@@ -34,14 +36,29 @@ const PreviewSection = () => {
     pauseOnHover: false,
   }
 
+  const { width } = useWindowDimensions()
+
   return (
     <PreviewWrapper>
       <PreviewTitle>Preview</PreviewTitle>
-      <SliderStyled {...settings}>
-        {data.allFile.edges.map((edge, key) => (
-          <PreviewImage src={edge.node.publicURL} alt={edge.node.base} />
-        ))}
-      </SliderStyled>
+      {width <= 1080 ? (
+        <SliderStyled {...settings}>
+          {data.allFile.edges.map((edge, key) => (
+            <PreviewImage src={edge.node.publicURL} alt={edge.node.base} />
+          ))}
+        </SliderStyled>
+      ) : (
+        <PreviewContainer>
+          <PreviewImageList>
+            {data.allFile.edges.map((edge, key) => (
+              <PreviewImage src={edge.node.publicURL} alt={edge.node.base} />
+            ))}
+            {data.allFile.edges.map((edge, key) => (
+              <PreviewImage src={edge.node.publicURL} alt={edge.node.base} />
+            ))}
+          </PreviewImageList>
+        </PreviewContainer>
+      )}
     </PreviewWrapper>
   )
 }

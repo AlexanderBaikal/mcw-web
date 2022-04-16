@@ -63,7 +63,6 @@ const Navbar = () => {
                   Home
                 </NavLinks>
               </NavItem>
-              <NavItem></NavItem>
               <NavItem>
                 <NavLinks dark={scroll} to="/author">
                   Author

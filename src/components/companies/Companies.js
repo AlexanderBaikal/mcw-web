@@ -2,16 +2,23 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: ${({ top }) => (top ? "flex" : "none")};
+  flex-direction: ${({ top }) => (top ? "row" : "column")};
   align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
   margin-bottom: 80px;
+
+  @media screen and (max-width: 1080px) {
+    display: ${({ top }) => (top ? "none" : "flex")};
+  }
 `
 
 export const Companies = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  display: grid;
+  display: ${({ top }) => (top ? "flex" : "grid")};
+  justify-content: center;
   -webkit-box-align: center;
   width: 100%;
   align-items: center;
@@ -19,17 +26,9 @@ export const Companies = styled.div`
   grid-column-gap: 16px;
   grid-row-gap: 68px;
   max-width: 1000px;
-  /* padding-left: 125px;
-  padding-right: 125px; */
-  /* -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr; */
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /* -ms-grid-rows: auto auto; */
   grid-template-rows: auto auto;
   padding: 0 65px;
-  /* grid-template-areas:
-    "a b c"
-    "a b c"
-    "a b c"; */
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -53,10 +52,12 @@ export const ImageContainer = styled.div`
   -webkit-box-pack: center;
   -webkit-box-align: center;
   align-items: center;
+  min-width: ${({ top }) => (top ? "9vw" : "100%")};
 `
 
 export const LogoImage = styled.img`
-  height: 56px;
+  height: ${({ top }) => (top ? "4vw" : "56px")};
+
   /* width: 100%; */
   /* aspect-ratio: 1;  */
   /* margin-right: 36px;

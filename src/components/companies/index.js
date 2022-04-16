@@ -9,7 +9,7 @@ import {
   Wrapper,
 } from "./Companies"
 
-const CompaniesSection = () => {
+const CompaniesSection = ({ top }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "images/logos/" } }) {
@@ -25,11 +25,15 @@ const CompaniesSection = () => {
   `)
 
   return (
-    <Wrapper>
-      <Companies>
+    <Wrapper top={top}>
+      <Companies top={top}>
         {data.allFile.edges.map((edge, key) => (
-          <ImageContainer>
-            <LogoImage src={edge.node.publicURL} alt={edge.node.base} />
+          <ImageContainer top={top}>
+            <LogoImage
+              top={top}
+              src={edge.node.publicURL}
+              alt={edge.node.base}
+            />
           </ImageContainer>
         ))}
       </Companies>

@@ -42,13 +42,14 @@ export const ExtrasContainer = styled.div`
   align-items: center;
   grid-auto-columns: 1fr;
   grid-column-gap: 16px;
+  grid-row-gap: 0px;
   max-width: 1000px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
 
   @media screen and (max-width: 1230px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 16px;
+    grid-row-gap: 68px;
   }
   @media screen and (max-width: 1050px) {
     grid-template-columns: 1fr 1fr 1fr;
