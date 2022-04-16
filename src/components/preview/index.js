@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import {
   PreviewContainer,
   PreviewImage,
@@ -8,7 +8,6 @@ import {
   PreviewWrapper,
   SliderStyled,
 } from "./PreviewSection"
-import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import useWindowDimensions from "../../hooks/useWindowDimensions"

@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import McwLogo from "../icons/McwLogo"
 
 export const Nav = styled.nav`
   background: ${({ active }) => (active ? "#fff" : "#2196F3")};
@@ -41,10 +40,6 @@ export const NavLogo = styled(Link)`
   @media screen and (max-width: 960px) {
     color: #2196f3;
   }
-`
-
-export const NavIcon = styled(McwLogo)`
-  margin: 0 0.5rem 0 2rem;
 `
 
 export const MobileIcon = styled.div`

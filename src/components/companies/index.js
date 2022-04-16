@@ -1,13 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
-import {
-  Companies,
-  ImageContainer,
-  LogoImage,
-  Text,
-  Wrapper,
-} from "./Companies"
+import { Companies, ImageContainer, LogoImage, Wrapper } from "./Companies"
 
 const CompaniesSection = ({ top }) => {
   const data = useStaticQuery(graphql`
@@ -42,14 +35,3 @@ const CompaniesSection = ({ top }) => {
 }
 
 export default CompaniesSection
-
-{
-  /* <ImageContainer>
-<GatsbyImage
-  objectFit="contain"
-  imgStyle={{ width: "auto" }}
-  image={getImage(edge.node.childImageSharp)}
-  alt={edge.node.base}
-/>
-</ImageContainer> */
-}

@@ -5,7 +5,6 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
-  NavIcon,
   MobileIcon,
   NavMenu,
   NavLinks,
@@ -21,7 +20,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions"
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [scroll, setScroll] = useState(false)
-  const { height, width } = useWindowDimensions()
+  const { width } = useWindowDimensions()
 
   const handleClick = () => setClick(!click)
 

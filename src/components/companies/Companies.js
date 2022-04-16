@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.div`
   display: ${({ top }) => (top ? "flex" : "none")};
@@ -57,9 +56,4 @@ export const ImageContainer = styled.div`
 
 export const LogoImage = styled.img`
   height: ${({ top }) => (top ? "4vw" : "56px")};
-
-  /* width: 100%; */
-  /* aspect-ratio: 1;  */
-  /* margin-right: 36px;
-  margin-left: 36px; */
 `
