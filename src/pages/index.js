@@ -5,6 +5,7 @@ import HeroSection from "../components/heroSection"
 import Layout from "../components/layout"
 import PreviewSection from "../components/preview"
 import Seo from "../components/seo"
+import Technologies from "../components/technologies"
 
 const IndexPage = () => (
   <Layout>
@@ -12,8 +13,9 @@ const IndexPage = () => (
     <HeroSection />
     <CompaniesSection top />
     <PreviewSection />
-    <CompaniesSection />
-    <AboutSection />
+    <Technologies />
+    {/* <CompaniesSection /> */}
+    {/* <AboutSection /> */}
     {/* <Image /> */}
   </Layout>
 )

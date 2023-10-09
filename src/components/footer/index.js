@@ -21,7 +21,7 @@ const Footer = () => {
           />
           Megacarwash
         </SocialLogo>
-        <WebsiteRights>© 2022 Aleksandr Baranov</WebsiteRights>
+        <WebsiteRights>© {(new Date(Date.now())).getFullYear()} Aleksandr Baranov</WebsiteRights>
         <SocialIcons>
           <SocialIconLink
             href="https://github.com/AlexanderBaikal"
@@ -31,7 +31,7 @@ const Footer = () => {
             <FaGithub />
           </SocialIconLink>
           <SocialIconLink
-            href="https://www.instagram.com/alex_baikalovvv/"
+            href="https://www.instagram.com/aleks_baikalov/"
             target="blank"
             aria-label="Intagram"
           >

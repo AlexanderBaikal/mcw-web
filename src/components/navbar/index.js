@@ -57,16 +57,6 @@ const Navbar = () => {
               {click ? <FaTimes color="#2196F3" /> : <FaBars color="#2196F3" />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
-              <NavItem>
-                <NavLinks dark={scroll} to="/">
-                  Home
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks dark={scroll} to="/author">
-                  Author
-                </NavLinks>
-              </NavItem>
               <HiddenWide>
                 <NavItem>
                   <NavLinks dark={scroll} to="/">
@@ -77,7 +67,7 @@ const Navbar = () => {
             </NavMenu>
             <NavItem>
               <HiddenNarrow>
-                <Button>Contact us</Button>
+                <Button>Author</Button>
               </HiddenNarrow>
             </NavItem>
           </NavbarContainer>

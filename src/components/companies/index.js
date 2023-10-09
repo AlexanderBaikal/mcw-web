@@ -1,35 +1,53 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { Companies, ImageContainer, LogoImage, Wrapper } from "./Companies"
+import {
+  ExtraContainer,
+  ExtrasContainer,
+  ExtrasTitle,
+  ExtrasWrapper, Wrapper
+} from "./Companies"
+import ExtraText from "../extraText"
+
+const aboutItems = [
+  {
+    main: "JS",
+    top: "main",
+    bottom: "language",
+  },
+  {
+    main: "E2E",
+    top: "1 person",
+    bottom: "100% work",
+  },
+  {
+    main: "6",
+    top: "month",
+    bottom: "of work",
+  },
+  {
+    main: "1M+",
+    top: "lines",
+    bottom: "of code",
+  },
+  {
+    main: "UI",
+    top: "modern",
+    bottom: "design",
+  },
+]
 
 const CompaniesSection = ({ top }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { regex: "images/logos/" } }) {
-        edges {
-          node {
-            id
-            base
-            publicURL
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Wrapper top={top}>
-      <Companies top={top}>
-        {data.allFile.edges.map((edge, key) => (
-          <ImageContainer top={top}>
-            <LogoImage
-              top={top}
-              src={edge.node.publicURL}
-              alt={edge.node.base}
-            />
-          </ImageContainer>
-        ))}
-      </Companies>
+      <ExtrasWrapper>
+        <ExtrasContainer>
+          {aboutItems.map((item, key) => (
+            <ExtraContainer>
+              <ExtraText main={item.main} top={item.top} bottom={item.bottom} />
+            </ExtraContainer>
+          ))}
+        </ExtrasContainer>
+      </ExtrasWrapper>
     </Wrapper>
   )
 }
