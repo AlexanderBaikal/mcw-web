@@ -117,14 +117,4 @@ export const NavItem = styled.li`
 
 export const HiddenNarrow = styled.div`
   display: flex;
-  @media screen and (max-width: 960px) {
-    display: none;
-  }
-`
-
-export const HiddenWide = styled.div`
-  display: none;
-  @media screen and (max-width: 960px) {
-    display: flex;
-  }
 `

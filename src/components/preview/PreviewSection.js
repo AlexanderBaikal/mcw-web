@@ -30,7 +30,8 @@ export const PreviewContainer = styled.div`
 
 export const PreviewImageList = styled.div`
   white-space: nowrap;
-  width: 300px;
+  display: flex;
+  justify-content: center;
 
     & img {
       position: absolute;
@@ -70,12 +71,29 @@ export const PreviewRight = styled.div`
   text-align: right;
   width: 33.33%;
   padding-bottom: 80px;
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: 0px!important;
+    }
 `
 
 export const PreviewBottom = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 600px) {
+    > div {
+    min-width: 100%!important;
+    max-width: 100%!important;
+    text-align: center;
+
+    &:last-child{ 
+      padding-bottom: 40px;
+    }
+    }
+  }
 
   > div {
     width: 50%;
@@ -86,6 +104,8 @@ export const PreviewBottom = styled.div`
       font-style: italic;
     }
   }
+
+
 `
 
 
@@ -94,6 +114,22 @@ export const PreviewTitle = styled.h1`
   font-weight: 600;
   margin-bottom: 22px;
   color: #2196F3;
+
+  @media screen and (max-width: 1200px) {
+    .title {
+      font-size: 60px;
+    }
+  }
+
+@media screen and (max-width: 960px) {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+}
 `
 
 export const PreviewDescription = styled.div`
@@ -133,6 +169,10 @@ width: fit-content;
 background: #FF0000;
 color: white;
 text-decoration: none;
+
+&:hover {
+background: #F00000;
+}
 `
 
 export const PreviewWrapper = styled.div`
@@ -160,6 +200,8 @@ export const PreviewWrapper = styled.div`
     align-items: center;
    }
   }
+
+
 `
 
 export const Preview = styled.div`

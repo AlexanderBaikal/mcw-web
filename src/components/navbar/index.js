@@ -10,7 +10,6 @@ import {
   NavLinks,
   NavItem,
   SemiBold,
-  HiddenWide,
   HiddenNarrow,
 } from "./NavbarElements"
 import McwLogo from "../../images/assets/megacarwash.svg"
@@ -53,23 +52,7 @@ const Navbar = () => {
                 </>
               ) : null}
             </NavLogo>
-            <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes color="#2196F3" /> : <FaBars color="#2196F3" />}
-            </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
-              <HiddenWide>
-                <NavItem>
-                  <NavLinks dark={scroll} to="/">
-                    Contact us
-                  </NavLinks>
-                </NavItem>
-              </HiddenWide>
-            </NavMenu>
-            <NavItem>
-              <HiddenNarrow>
-                <Button>Author</Button>
-              </HiddenNarrow>
-            </NavItem>
+            <Button href="https://www.alexbaikalov.com/" target="_blank">Author</Button>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
