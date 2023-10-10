@@ -20,7 +20,10 @@ const HeroSection = () => {
               <p>just sign up and come</p>
             </div>
             <div className="hero-btns">
-              <img className="gp-link" src={gpLink} alt={"goople play"} />
+              <a href="https://play.google.com/store/apps/details?id=com.megacarwash"
+                target="_blank" >
+                <img className="gp-link" src={gpLink} alt={"goople play"} />
+              </a>
               <img className="as-link" src={asLink} alt={"appstore"} />
             </div>
           </div>
