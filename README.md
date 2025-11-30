@@ -158,6 +158,6 @@ Site footer with social media links and copyright information.
 
 Aleksandr Baikalov
 
-- Website: [alexbaikalov.com](https://www.alexbaikalov.com/)
+- Website: [alexbaikal.dev](https://www.alexbaikal.dev/)
 - GitHub: [@AlexanderBaikal](https://github.com/AlexanderBaikal)
 - LinkedIn: [aleksandr-baikalov](https://www.linkedin.com/in/aleksandr-baikalov/)
